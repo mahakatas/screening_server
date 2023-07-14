@@ -3,7 +3,13 @@ package com.zimttech.screening.services;
 import com.zimttech.screening.domain.Patient;
 
 public interface PatientService {
-    default Iterable<Patient> fetchAllPatients() {
-        return null;
-    }
+    Iterable<Patient> fetchAllPatients() ;
+
+    Boolean addPatient(Patient patient);
+
+    Iterable<Patient> deletePatient(String patient);
+
+    Iterable<Patient> updatePatient(String patientNumber, Patient patient);
+
+    Patient findPatient(String patientNumber);
 }
