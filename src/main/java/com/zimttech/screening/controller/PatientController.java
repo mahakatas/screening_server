@@ -37,7 +37,7 @@ public class PatientController {
 
     @PutMapping("/updatePatient/{patientNumber}")
     @ResponseBody
-    public Iterable<Patient> update(@PathVariable String patientNumber, @RequestBody Patient patient) {
+    public Boolean update(@PathVariable String patientNumber, @RequestBody Patient patient) {
         return patientService.updatePatient(patientNumber, patient);
 
     }
@@ -49,7 +49,7 @@ public class PatientController {
     }
 
     @RequestMapping("/patientDecision/{patientNumber}")
-    public Patient getDecision(@PathVariable String patientNumber) {
+    public String getDecision(@PathVariable String patientNumber) {
 
         return patientService.getPatientDecision(patientNumber);
     }

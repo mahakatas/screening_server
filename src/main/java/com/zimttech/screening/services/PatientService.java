@@ -9,9 +9,9 @@ public interface PatientService {
 
     Iterable<Patient> deletePatient(String patient);
 
-    Iterable<Patient> updatePatient(String patientNumber, Patient patient);
+    Boolean updatePatient(String patientNumber, Patient patient);
 
     Patient findPatient(String patientNumber);
 
-    Patient getPatientDecision(String patientNumber);
+    String getPatientDecision(String patientNumber);
 }
