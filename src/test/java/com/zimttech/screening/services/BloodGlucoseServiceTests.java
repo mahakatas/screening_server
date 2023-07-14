@@ -1,28 +1,44 @@
 package com.zimttech.screening.services;
 
+import com.zimttech.screening.domain.BloodGlucose;
+import com.zimttech.screening.repositories.BloodGlucoseRepository;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
 
-class BloodGlucoseServiceTests {
+class BloodGlucoseServiceTests  {
+    @Mock
+    private BloodGlucoseRepository bloodGlucoseRepository;
+
+    @InjectMocks
+    private BloodGlucoseServiceImpl bloodGlucoseService;
 
     @Test
-    void fetchAllBGs() {
+    public void testAddBloodGlucose() {
+
     }
 
     @Test
-    void addBloodGlucose() {
+    public void testFindBloodGlucose() {
+
     }
 
     @Test
-    void deleteBloodGlucose() {
+    public void testUpdateBloodGlucose() {
+
     }
 
     @Test
-    void updateBloodGlucose() {
+    public void testDeleteBloodGlucose() {
+
     }
 
     @Test
-    void findBloodGlucose() {
+    public void testFetchAllBGs() {
+
     }
 }

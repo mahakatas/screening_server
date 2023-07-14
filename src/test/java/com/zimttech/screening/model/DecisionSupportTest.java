@@ -4,21 +4,29 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DecisionSupportTest {
+class DecisionSupportTests {
 
     @Test
-    void getBloodGlucoseCategory() {
+    public void testBloodGlucoseCategory() {
+        DecisionSupport ds = new DecisionSupport(80, 120, 80, 70, 1.7, 30, "Male");
+        assertEquals("High", ds.getBloodGlucoseCategory());
     }
 
     @Test
-    void getBPCategory() {
+    public void testBPCategory() {
+        DecisionSupport ds = new DecisionSupport(80, 120, 80, 70, 1.7, 30, "Male");
+        assertEquals("Normal", ds.getBPCategory());
     }
 
     @Test
-    void getBMICategory() {
+    public void testBMICategory() {
+        DecisionSupport ds = new DecisionSupport(80, 120, 80, 70, 1.7, 30, "Male");
+        assertEquals("Normal", ds.getBMICategory());
     }
 
     @Test
-    void getHeightCategory() {
+    public void testHeightCategory() {
+        DecisionSupport ds = new DecisionSupport(80, 120, 80, 70, 1.7, 30, "Male");
+        assertEquals("Normal", ds.getHeightCategory());
     }
 }
