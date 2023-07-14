@@ -12,4 +12,6 @@ public interface PatientService {
     Iterable<Patient> updatePatient(String patientNumber, Patient patient);
 
     Patient findPatient(String patientNumber);
+
+    Patient getPatientDecision(String patientNumber);
 }
