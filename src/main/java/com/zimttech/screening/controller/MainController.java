@@ -16,6 +16,7 @@ package com.zimttech.screening.controller;
     @CrossOrigin(origins = "http://localhost:4200")
     @AllArgsConstructor
     public class MainController {
+
         private final PatientService patientService;
 
         @GetMapping(path = "/")
