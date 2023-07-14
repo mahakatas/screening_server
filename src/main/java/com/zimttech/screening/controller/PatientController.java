@@ -7,8 +7,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
-
 
 @Controller
 @RequestMapping(path = "/screening")
@@ -50,4 +48,9 @@ public class PatientController {
         return patientService.findPatient(patientNumber);
     }
 
+    @RequestMapping("/patientDecision/{patientNumber}")
+    public Patient getDecision(@PathVariable String patientNumber) {
+
+        return patientService.getPatientDecision(patientNumber);
+    }
 }
