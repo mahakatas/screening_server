@@ -39,7 +39,7 @@ public class HeightController {
 
     @PutMapping("/updateHeight")
     @ResponseBody
-    public Iterable<Height> update(@RequestBody Height height) {
+    public Height update(@RequestBody Height height) {
         return heightService.updateHeight(height);
 
     }

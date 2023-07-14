@@ -4,4 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TreatmentDataRepository extends JpaRepository<TreatmentData, Long> {
 
+    void deleteByPatientNumber(String patientNumber);
+
+    TreatmentData findByPatientNumber(String patientNumber);
 }

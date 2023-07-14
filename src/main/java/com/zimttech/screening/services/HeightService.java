@@ -7,7 +7,7 @@ public interface HeightService {
 
     Height findHeight(String patientNumber);
 
-    Iterable<Height> updateHeight(Height height);
+    Height updateHeight(Height height);
 
     Iterable<Height> deleteHeight(String patientNumber);
 

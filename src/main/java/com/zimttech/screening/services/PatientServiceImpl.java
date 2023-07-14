@@ -28,7 +28,7 @@ public class PatientServiceImpl implements PatientService {
     }
 
     public Iterable<Patient> deletePatient(String patientNumber) {
-        Patient patient =  patientRepository.findByNumber(patientNumber);
+        Patient patient =  patientRepository.findByPatientNumber(patientNumber);
         patientRepository.delete(patient);
         return patientRepository.findAll();
     }
@@ -40,11 +40,11 @@ public class PatientServiceImpl implements PatientService {
 
     public Patient findPatient(String patientNumber){
 
-        return  patientRepository.findByNumber(patientNumber);
+        return  patientRepository.findByPatientNumber(patientNumber);
     }
 
     public String getPatientDecision(String patientNumber){
-        Patient patient =  patientRepository.findByNumber(patientNumber);
+        Patient patient =  patientRepository.findByPatientNumber(patientNumber);
         if (patient != null) {
             BloodPressure bp = bloodPressureRepository.findByPatientNumber(patientNumber);
             BloodGlucose bloodGlucose = bloodGlucoseRepository.findByPatientNumber(patientNumber);

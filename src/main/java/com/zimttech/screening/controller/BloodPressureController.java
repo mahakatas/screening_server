@@ -40,7 +40,7 @@ public class BloodPressureController {
 
     @PutMapping("/updateBloodPressure")
     @ResponseBody
-    public Iterable<BloodPressure> update(@RequestBody BloodPressure bloodPressure) {
+    public BloodPressure update(@RequestBody BloodPressure bloodPressure) {
         return bloodPressureService.updateBloodPressure(bloodPressure);
 
     }

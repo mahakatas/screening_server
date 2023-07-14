@@ -9,7 +9,7 @@ public interface BloodGlucoseService {
 
     Iterable<BloodGlucose> deleteBloodGlucose(String patientNumber);
 
-    Iterable<BloodGlucose> updateBloodGlucose(BloodGlucose bloodGlucose);
+    BloodGlucose updateBloodGlucose(BloodGlucose bloodGlucose);
 
     BloodGlucose findBloodGlucose(String patientNumber);
 }

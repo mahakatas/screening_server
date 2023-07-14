@@ -39,7 +39,7 @@ public class WeightController {
 
     @PutMapping("/updateWeight")
     @ResponseBody
-    public Iterable<Weight> update(@RequestBody Weight weight) {
+    public Weight update(@RequestBody Weight weight) {
         return weightService.updateWeight(weight);
 
     }

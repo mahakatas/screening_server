@@ -8,7 +8,7 @@ public interface WeightService {
     Boolean addWeight(Weight weight);
 
     Iterable<Weight> deleteWeight(String patientNumber);
-    Iterable<Weight> updateWeight(Weight weight);
+    Weight updateWeight(Weight weight);
 
     Weight findWeight(String patientNumber);
 }

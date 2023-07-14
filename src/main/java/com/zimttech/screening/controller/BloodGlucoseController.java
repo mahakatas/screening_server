@@ -24,7 +24,7 @@ public class BloodGlucoseController {
 
     }
 
-    @PostMapping(path = "/addBP")
+    @PostMapping(path = "/addBG")
     public @ResponseBody Boolean add(@RequestBody BloodGlucose bloodGlucose) {
         return bloodGlucoseService.addBloodGlucose(bloodGlucose);
     }
@@ -38,7 +38,7 @@ public class BloodGlucoseController {
 
     @PutMapping("/updateBloodGlucose")
     @ResponseBody
-    public Iterable<BloodGlucose> update(@RequestBody BloodGlucose bloodGlucose) {
+    public BloodGlucose update(@RequestBody BloodGlucose bloodGlucose) {
         return bloodGlucoseService.updateBloodGlucose(bloodGlucose);
 
     }

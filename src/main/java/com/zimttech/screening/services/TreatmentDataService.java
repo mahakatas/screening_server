@@ -9,7 +9,7 @@ public interface TreatmentDataService {
 
     Boolean addTreatmentData(TreatmentData treatmentData);
 
-    Iterable<TreatmentData> updateTreatmentData(TreatmentData treatmentData);
+    TreatmentData updateTreatmentData(TreatmentData treatmentData);
 
     TreatmentData findTreatmentData(String patientNumber);
 }

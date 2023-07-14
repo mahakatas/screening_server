@@ -24,7 +24,7 @@ public class TreatmentDataController {
 
     }
 
-    @PostMapping(path = "/addBP")
+    @PostMapping(path = "/addTreatment")
     public @ResponseBody Boolean add(@RequestBody TreatmentData treatmentData) {
         return treatmentDataService.addTreatmentData(treatmentData);
     }
@@ -38,7 +38,7 @@ public class TreatmentDataController {
 
     @PutMapping("/updateTreatmentData")
     @ResponseBody
-    public Iterable<TreatmentData> update(@RequestBody TreatmentData treatmentData) {
+    public TreatmentData update(@RequestBody TreatmentData treatmentData) {
         return treatmentDataService.updateTreatmentData(treatmentData);
 
     }

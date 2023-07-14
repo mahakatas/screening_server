@@ -5,4 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface WeightRepository extends JpaRepository<Weight, Long> {
     Weight findByPatientNumber(String patientNumber);
+
+    void deleteByPatientNumber(String patientNumber);
+
+    Iterable<Weight> findAllByPatientNumber(String patientNumber);
 }

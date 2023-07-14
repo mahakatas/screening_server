@@ -9,7 +9,7 @@ public interface BloodPressureService {
 
     Iterable<BloodPressure> deleteBloodPressure(String patientNumber);
 
-    Iterable<BloodPressure> updateBloodPressure(BloodPressure bloodPressure);
+    BloodPressure updateBloodPressure(BloodPressure bloodPressure);
 
     BloodPressure findBloodPressure(String patientNumber);
 }
